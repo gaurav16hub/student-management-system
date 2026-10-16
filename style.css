@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 28px 16px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.card,
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000d;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+form input {
+    margin-bottom: 0;
+}
+
+button {
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+form button {
+    grid-column: 1 / -1;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #eff6ff;
+}
+
+.delete-btn {
+    background: #dc2626;
+    padding: 8px 12px;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.edit-btn {
+    background: #15803d;
+    padding: 8px 12px;
+    margin-right: 5px;
+}
+
+#emptyMessage {
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
+#attendanceDate {
+    max-width: 260px;
+    display: block;
+    margin-top: 10px;
+}
+
+#attendanceList select {
+    width: 130px;
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+}
+
+#attendanceMessage {
+    color: #15803d;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.stats .card {
+    border-top: 4px solid #2563eb;
+}
+
+@media (max-width: 600px) {
+    #attendanceList select {
+        width: 110px;
+    }
+}
+#marksList input,
+#marksList select {
+    width: 120px;
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+#marksList .save-marks-btn {
+    background: #15803d;
+}
+
+#marksList .save-marks-btn:hover {
+    background: #166534;
+}
+
+.pass-result {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.fail-result {
+    color: #dc2626;
+    font-weight: bold;
+}
+#marksList input {
+    width: 110px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+#marksList button {
+    margin: 3px;
+    padding: 8px 10px;
+}
+
+#reportStudent {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 10px 0 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+#reportCard {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+#reportCard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#reportCard th,
+#reportCard td {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #reportCard,
+    #reportCard * {
+        visibility: visible;
+    }
+
+    #reportCard {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        color: black;
+    }
+}
+/* Professional Dashboard */
+.dashboard-section {
+  margin: 25px 0;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dashboard-card {
+  padding: 22px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.dashboard-card h3 {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0 0 10px;
+}
+
+.dashboard-card p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px;
+}
+
+.dashboard-card small {
+  color: #64748b;
+}
+
+.students-card {
+  border-top: 4px solid #3b82f6;
+}
+
+.marks-card {
+  border-top: 4px solid #10b981;
+}
+
+.average-card {
+  border-top: 4px solid #8b5cf6;
+}
+
+.records-card {
+  border-top: 4px solid #f59e0b;
+}
+
+@media (max-width: 900px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}

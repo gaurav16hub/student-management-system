@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage your students in one place</p>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+    <div class="card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Present Today</h3>
+        <p id="presentToday">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Absent Today</h3>
+        <p id="absentToday">0</p>
+    </div>
+</section>
+
+<section class="panel">
+    <h2>Attendance Management</h2>
+
+    <label for="attendanceDate">Select Date:</label>
+    <input type="date" id="attendanceDate">
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceList"></tbody>
+        </table>
+    </div>
+
+    <button type="button" id="saveAttendance">
+        Save Attendance
+    </button>
+
+    <p id="attendanceMessage" role="status"></p>
+</section>
+        <section class="panel">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="roll"
+                    placeholder="Roll Number"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Course (e.g. B.Tech CSE)"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Student Records</h2>
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Search by name or roll number"
+            >
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No.</th>
+                            <th>Course</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentList">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No students added yet.</p>
+        </section>
+    </main>
+ <section class="panel">
+    <h2>Marks Management</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Maximum Marks</th>
+                    <th>Percentage</th>
+                    <th>Result</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="marksList"></tbody>
+        </table>
+    </div>
+
+    <p id="marksMessage" role="status"></p>
+</section>
+
+    <section class="panel">
+    <h2>Student Report Card</h2>
+
+    <label for="reportStudent">Select Student:</label>
+    <select id="reportStudent">
+        <option value="">-- Select Student --</option>
+    </select>
+
+    <button type="button" id="generateReport">
+        Generate Report Card
+    </button>
+
+    <button type="button" id="printReport">
+        Print Report
+    </button>
+
+    <div id="reportCard"></div>
+</section>
+    <section class="dashboard-section">
+  <h2>Dashboard Overview</h2>
+
+  <div class="dashboard-cards">
+    <div class="dashboard-card students-card">
+      <div class="card-icon">👨‍🎓</div>
+      <h3>Total Students</h3>
+      <p id="dashboardTotalStudents">0</p>
+      <small>Registered students</small>
+    </div>
+
+    <div class="dashboard-card marks-card">
+      <div class="card-icon">📚</div>
+      <h3>Subjects</h3>
+      <p id="dashboardSubjects">0</p>
+      <small>Subjects with saved marks</small>
+    </div>
+
+    <div class="dashboard-card average-card">
+      <div class="card-icon">📊</div>
+      <h3>Average Marks</h3>
+      <p id="dashboardAverageMarks">0%</p>
+      <small>Average percentage</small>
+    </div>
+
+    <div class="dashboard-card records-card">
+      <div class="card-icon">📝</div>
+      <h3>Students with Marks</h3>
+      <p id="dashboardMarkedStudents">0</p>
+      <small>Students with saved marks</small>
+    </div>
+  </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
