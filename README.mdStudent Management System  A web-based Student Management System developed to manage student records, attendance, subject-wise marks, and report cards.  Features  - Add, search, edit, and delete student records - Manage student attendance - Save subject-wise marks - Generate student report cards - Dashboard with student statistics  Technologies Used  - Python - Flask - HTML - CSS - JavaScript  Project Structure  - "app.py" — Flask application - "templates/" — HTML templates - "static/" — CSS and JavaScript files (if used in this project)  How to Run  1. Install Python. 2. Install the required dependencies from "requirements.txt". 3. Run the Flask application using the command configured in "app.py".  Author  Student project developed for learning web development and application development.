@@ -1,0 +1,35 @@
+Student Management System
+
+A web-based Student Management System developed to manage student records, attendance, subject-wise marks, and report cards.
+
+Features
+
+- Add, search, edit, and delete student records
+- Manage student attendance
+- Save subject-wise marks
+- Generate student report cards
+- Dashboard with student statistics
+
+Technologies Used
+
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
+
+Project Structure
+
+- "app.py" — Flask application
+- "templates/" — HTML templates
+- "static/" — CSS and JavaScript files (if used in this project)
+
+How to Run
+
+1. Install Python.
+2. Install the required dependencies from "requirements.txt".
+3. Run the Flask application using the command configured in "app.py".
+
+Author
+
+Student project developed for learning web development and application development.
